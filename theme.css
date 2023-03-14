@@ -1,0 +1,182 @@
+@charset "UTF-8";
+:root {
+    --default-font: "Inter", sans-serif;
+    --font-monospace: "Jetbrains Mono", monospace;
+    --font-editor-size: 1em;
+    --font-h1-preview-size: 2em;
+    --font-h2-preview-size: 1.8em;
+    --font-h3-preview-size: 1.5em;
+    --font-h4-preview-size: 1.35em;
+    --font-h5-preview-size: 1.225em;
+    --font-h6-preview-size: 1.12em;
+    --font-math-preview-size: 1.126em;
+    --font-tag-preview-size: 0.88em;
+    --font-hover-preview-size: 0.9em;
+    --font-prompts-size: 0.875em;
+    --font-todolist-title-size: 1em;
+}
+body {
+    --anim-duration-none: 0;
+    --anim-duration-superfast: 70ms;
+    --anim-duration-fast: 140ms;
+    --anim-duration-moderate: 300ms;
+    --anim-duration-slow: 560ms;
+    --anim-motion-smooth: cubic-bezier(0.45, 0.05, 0.55, 0.95);
+    --anim-motion-delay: cubic-bezier(0.65, 0.05, 0.36, 1);
+    --anim-motion-jumpy: cubic-bezier(0.68, 0.55, 0.27, 1.55);
+    --anim-motion-swing: cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.theme-dark {
+    --background-code: #202525;
+    --background-code-preview: #202525;
+    --background-preview: #2C2727;
+    --background-primary: #2C2727;
+    --background-primary-alt: #2B2526;
+    --background-secondary: #252B2A;
+    --background-secondary-alt: #252B2A;
+    --background-tag: #141B1B;
+    --background-quick: #29181C;
+    --background-modifier-cover: rgba(0, 0, 0, 0.7);
+    --background-modifier-border: #253630;
+    --background-modifier-form-field: #1A0E13;
+    --background-modifier-form-field-highlighted: #192826;
+    --interactive-hover: #502B2A;
+    --interactive-accent: #4B1B26;
+    --interactive-accent-rgb: 75,27,38;
+    --interactive-accent-hover: #1F4743;
+    --scrollbar-bg: inherit;
+    --scrollbar-thumb-bg: #0C2B31;
+    --scrollbar-active-thumb-bg: #063437;
+    --table-line: #4C4C43;
+    --text-accent: #7A2D82;
+    --text-accent-hover: #7A2DB2CC;
+    --text-faint: #44656D;
+    --text-highlight-bg: #11222433;
+    --text-muted: #604341;
+    --text-normal: #DDE2E0;
+    --text-selection: #1C0A1633;
+    --text-tag: #ECC7E5;
+    --text-error: #E5D1DA;
+    --file-hr: #C6E6E3;
+    --leaf-handle: #E4CDCC;
+}
+
+.cm-s-obsidian {
+    font-family: var(--font-monospace);
+    color: #4D7164;
+    font-size: var(--font-editor-size);
+    line-height: 1.5em;
+}
+.cm-s-obsidian .CodeMirror-linenumber {
+    color: #67675B;
+    font-size: var(--font-editor-linenumbers-size);
+}
+.cm-s-obsidian .CodeMirror-gutter-elt {
+    width: 25px !important;
+}
+.cm-s-obsidian .cm-formatting,
+.cm-s-obsidian .CodeMirror-foldmarker {
+    color: #0A5257 !important;
+}
+.cm-s-obsidian .cm-header {
+    color: #6F0059;
+}
+.cm-s-obsidian .cm-formatting-link,
+.cm-s-obsidian .cm-link {
+    color: #BD98B1 !important;
+}
+.cm-s-obsidian .cm-formatting-link-string,
+.cm-s-obsidian .cm-link {
+    color: #BABA9F !important;
+}
+.cm-s-obsidian .cm-formatting-link-string,
+.cm-s-obsidian .cm-url {
+    color: #C6AEAD !important;
+}
+.cm-s-obsidian span.cm-hmd-internal-link {
+    color: #83cada !important;
+}
+.cm-s-obsidian .cm-em,
+.cm-s-obsidian .cm-strong {
+    color: #E76FC1;
+}
+.cm-s-obsidian span.cm-inline-code {
+    color: #B2C7C0;
+    font-size: inherit;
+    padding: 0 !important;
+}
+.cm-s-obsidian pre.HyperMD-codeblock {
+    line-height: 1.5em;
+    font-size: var(--font-editor-size);
+}
+.cm-s-obsidian span.cm-hmd-codeblock,
+.cm-s-obsidian span.cm-hmd-indented-code,
+.cm-s-obsidian span.cm-math,
+.cm-s-obsidian pre.HyperMD-codeblock {
+    color: #828bb8;
+}
+.cm-s-obsidian span.cm-hmd-codeblock span.cm-keyword,
+.cm-s-obsidian span.cm-hmd-indented-code span.cm-keyword,
+.cm-s-obsidian span.cm-math span.cm-keyword,
+.cm-s-obsidian pre.HyperMD-codeblock span.cm-keyword {
+    color: #c099ff !important;
+}
+.cm-s-obsidian span.cm-hmd-codeblock span.cm-def,
+.cm-s-obsidian span.cm-hmd-indented-code span.cm-def,
+.cm-s-obsidian span.cm-math span.cm-def,
+.cm-s-obsidian pre.HyperMD-codeblock span.cm-def {
+    color: #c8d3f5 !important;
+}
+.cm-s-obsidian span.cm-hmd-codeblock span.cm-variable,
+.cm-s-obsidian span.cm-hmd-codeblock span.cm-variable-2,
+.cm-s-obsidian span.cm-hmd-codeblock span.cm-variable-3,
+.cm-s-obsidian span.cm-hmd-indented-code span.cm-variable,
+.cm-s-obsidian span.cm-hmd-indented-code span.cm-variable-2,
+.cm-s-obsidian span.cm-hmd-indented-code span.cm-variable-3,
+.cm-s-obsidian span.cm-math span.cm-variable,
+.cm-s-obsidian span.cm-math span.cm-variable-2,
+.cm-s-obsidian span.cm-math span.cm-variable-3,
+.cm-s-obsidian pre.HyperMD-codeblock span.cm-variable,
+.cm-s-obsidian pre.HyperMD-codeblock span.cm-variable-2,
+.cm-s-obsidian pre.HyperMD-codeblock span.cm-variable-3 {
+    color: #65bcff !important;
+}
+.cm-s-obsidian span.cm-hmd-codeblock span.cm-operator,
+.cm-s-obsidian span.cm-hmd-indented-code span.cm-operator,
+.cm-s-obsidian span.cm-math span.cm-operator,
+.cm-s-obsidian pre.HyperMD-codeblock span.cm-operator {
+    color: #86e1fc !important;
+}
+.cm-s-obsidian span.cm-hmd-codeblock span.cm-number,
+.cm-s-obsidian span.cm-hmd-indented-code span.cm-number,
+.cm-s-obsidian span.cm-math span.cm-number,
+.cm-s-obsidian pre.HyperMD-codeblock span.cm-number {
+    color: #ff966c !important;
+}
+.cm-s-obsidian span.cm-hmd-codeblock span.cm-string,
+.cm-s-obsidian span.cm-hmd-indented-code span.cm-string,
+.cm-s-obsidian span.cm-math span.cm-string,
+.cm-s-obsidian pre.HyperMD-codeblock span.cm-string {
+    color: #c3e88d !important;
+}
+.cm-s-obsidian span.cm-hmd-codeblock span.cm-comment,
+.cm-s-obsidian span.cm-hmd-indented-code span.cm-comment,
+.cm-s-obsidian span.cm-math span.cm-comment,
+.cm-s-obsidian pre.HyperMD-codeblock span.cm-comment {
+    color: #7a88cf !important;
+}
+.cm-s-obsidian span.cm-quote {
+    font-style: italic;
+}
+.cm-s-obsidian span.cm-comment {
+    color: #444a73 !important;
+    font-style: italic;
+}
+.cm-s-obsidian .cm-hmd-frontmatter.cm-def {
+    color: rgba(195, 232, 141, 0.8) !important;
+}
+.cm-s-obsidian .cm-hmd-frontmatter.cm-atom {
+    color: #ff966c !important;
+}
+  
